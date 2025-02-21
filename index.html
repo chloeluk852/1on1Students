@@ -3,96 +3,284 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Preface Creative Media Design Movie Trailer</title>
+    <link rel="shortcut icon" href="images/logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <title>Student Projects - Preface</title>
     <style>
-      body,
-      html {
+      body {
+        font-family: "Montserrat", sans-serif;
+
+        margin: 0 auto;
+        background-color: #f0f0f0;
+      }
+
+      .sticky {
         margin: 0;
         padding: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #000;
-        color: #fff;
-        font-family: "Montserrat", sans-serif;
-      }
-      .video-container {
-        width: 80vw; /* 80% of the viewport width */
-        height: 85vh; /* 85% of the viewport height */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      video {
-        width: 100%;
-        height: auto;
-        display: block;
+        overflow: hidden;
+        background-color: #ffffff;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 100; /* Ensure the navbar is above other content */
       }
       h1 {
-        margin-bottom: 20px;
+        text-align: center;
+        color: #404041;
+        margin-top: 60px;
+        padding: 10px;
       }
-      .video-nav {
-        margin-top: 20px;
+
+      h3 {
+        text-align: center;
+        padding: 10px;
+        color: #404041;
       }
-      .video-nav a {
-        color: #fff;
-        margin: 0 10px;
+      h2,
+      h4 {
+        padding: 10px;
+      }
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #85bcce;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #0056b3;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .card {
+        width: 200px;
+        margin: 10px;
+        text-align: center;
+        background-color: white;
+        color: #404041;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+      .card h4 {
+        color: #6d6d6d;
+        padding: 10px;
+      }
+      .card p {
+        padding: 10px;
+        margin: 0;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .toggle-view {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .toggle-view:hover {
+        background-color: #0056b3;
+      }
+      .hidden {
+        display: none;
       }
     </style>
   </head>
   <body>
-    <h1 id="videoTitle">Creative Media Design Student Movie Trailer</h1>
-    <div class="video-container">
-      <video id="videoPlayer" controls autoplay muted>
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="video-nav">
-      <a href="?video=1">Abby Yu</a>
-      <a href="?video=2">Addison Ong</a>
-      <a href="?video=3">Adelle Wu</a>
-      <a href="?video=4"></a>
-    </div>
+    <header style="text-align: center; background-color: white; width: 100%">
+      <img
+        src="images/Preface logo_grey.png"
+        alt="Preface Logo Grey"
+        style="width: 100%; max-width: 300px; background-color: white"
+      />
+    </header>
 
+    <h1>Student Projects</h1>
+
+    <div id="cardContainer" class="container"></div>
     <script>
-      const videos = {
-        1: {
-          title: "Video 1 Title",
-          src: "video/video1.mp4",
-        },
-        2: {
-          title: "Video 2 Title",
-          src: "video/video2.mp4",
-        },
-        3: {
-          title: "Video 3 Title",
-          src: "video/video3.mp4",
-        },
+      const imageMap = {
+        "Minecraft-inspired Arcade Game": "images/Ellie Wong.png",
+        "Tetris in Chrome extension": "images/Kayley Kwok.png",
+        "MTR project": "images/Ka Him.JPG",
+        "Space Invader": "images/Chester.png",
+        "Comic Nostalgia Gang": "images/Caleb.png",
+        "Memory Game": "images/Emma - Memory.png",
+        Portfolio: "images/Emma.jpeg",
+        ChatApp: "images/Neo.png",
+        "One Piece Quiz": "images/Junghu.jpeg",
+        "Recycling Game": "images/EthanZheng.jpeg",
+        "NBA Data Analysis": "images/Elvin Cheung - NBA.jpeg",
+        "2048 game": "images/Elvin Cheung - 2048.png",
+        "Liverpool Website": "images/Jayden Heng.png",
+        FUNLAND: "images/Alicia.png",
+        "Amelia's Station": "images/Amelia.png",
+        "School Club Slides made by Kelbee!": "images/Kelbee.png",
+        "Treasure Hunt": "images/Enoch Chiu.png",
+        "Be a Little YouTuber": "images/Gareth-video.png",
+        "Football Analysis": "images/Ethan Yip.png",
+        "Save The Ocean - Julien's Twist": "images/Julien Tsang.png",
+        "Snake Game": "images/Roy Chi.png",
+        "Card Game": "images/Nok Yin.png",
+        "Portfolio Website": "images/Evan Lam.png",
+        "App Inventor + Minecraft HTML website": "images/Marquis.png",
       };
 
-      function loadVideo() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const videoId = urlParams.get("video") || "1"; // Default to '1' if no parameter
+      const studentNames = {
+        "Minecraft-inspired Arcade Game": "Ellie Wong",
+        "Tetris in Chrome extension": "Kayley Kwok",
+        "MTR project": "Ka Him Leung",
+        "Space Invader": "Chester Tam",
+        "Comic Nostalgia Gang": "Caleb Hui",
+        "Memory Game": "Emma Hunt",
+        Portfolio: "Emma Hunt",
+        ChatApp: "Neo Lung",
+        "One Piece Quiz": "JungHu",
+        "Recycling Game": "Ethan Zheng",
+        "NBA Data Analysis": "Elvin Cheung",
+        "2048 game": "Elvin Cheung",
+        "Liverpool Website": "Jayden Heng",
+        FUNLAND: "Alicia Tan",
+        "Amelia's Station": "Amelia Tan",
+        "School Club Slides made by Kelbee!": "Kelbee Fok",
+        "Treasure Hunt": "Enoch Chiu",
 
-        const video = videos[videoId];
-        if (video) {
-          document.getElementById("videoTitle").textContent = video.title;
-          const videoPlayer = document.getElementById("videoPlayer");
-          videoPlayer.src = video.src;
-        } else {
-          document.getElementById("videoTitle").textContent = "Video Not Found";
-        }
-      }
+        "Be a Little YouTuber": "Gareth Li",
+        "Football Analysis": "Ethan Yip",
+        "Save The Ocean - Julien's Twist": "Julien Tsang",
+        "Snake Game": "Roy Chi",
+        "Card Game": "Nok Yin Lim",
+        "Portfolio Website": "Evan Lam",
+        "App Inventor + Minecraft HTML website": "Marquis Chan",
+      };
 
-      window.onload = loadVideo;
+      const links = {
+        "Minecraft-inspired Arcade Game":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/preview",
+        "Tetris in Chrome extension":
+          "https://chromewebstore.google.com/detail/sirtet/ihladjbfkfejijomgfncgjgdlkaggkie",
+        "MTR project": "https://stevenleung124.itch.io/hkr-on-the-go",
+        "Space Invader": "https://chestnut-god.itch.io/space-invaders",
+        "Comic Nostalgia Gang": "https://bit.ly/comicNostalgiaGang",
+        "Memory Game": "https://227560em.github.io/Memory-Game/",
+        Portfolio: "https://227560em.github.io/Web-Development-Portfolio/",
+        ChatApp:
+          "https://drive.google.com/file/d/1VcyvbGewM8lwsHaGgsAvjZJDmTIAetyQ/preview",
+        "One Piece Quiz":
+          "https://drive.google.com/file/d/1TreneblRvCLq1KQedwjc6mdfcbijD7E4/preview",
+        "Recycling Game": "https://scratch.mit.edu/projects/1132224587",
+        "NBA Data Analysis":
+          "https://drive.google.com/file/d/1WKo9cmM-KeUHwm8oHgKpHq0WDRBPyH0N/preview",
+        "2048 game": "https://2048-sepia-nine.vercel.app/",
+        "Liverpool Website": "https://liverpooldream.netlify.app/",
+        FUNLAND: "https://scratch.mit.edu/projects/984574965/",
+        "Amelia's Station": "https://scratch.mit.edu/projects/970033341/",
+        "School Club Slides made by Kelbee!":
+          "https://docs.google.com/presentation/d/1tm6m9VoGVDXiYpaz4RsWElh671dvYel0tFItPimkpDU/edit#slide=id.p1",
+        "Treasure Hunt": "https://enochc.itch.io/treasure-hunt",
+
+        "Be a Little YouTuber":
+          "https://drive.google.com/file/d/12T7uTmajt-_Q6xSQvW3x0OVGquH6mJv5/preview",
+        "Football Analysis":
+          "https://drive.google.com/file/d/1WGZFeiG0CK92lczet-RmaW9gjvWqzk3P/preview",
+        "Save The Ocean - Julien's Twist":
+          "https://drive.google.com/file/d/1XtQYX66nbhYKVozAI-u7TcU5wYRU288H/preview",
+        "Snake Game":
+          "https://drive.google.com/file/d/19HIFME8Vv_G3duqMRhUNDvrsA4TL65dQ/preview",
+        "Card Game": "https://github.com/nokyinlim/card-game",
+        "Portfolio Website": "https://superel123.github.io/Portfolio/",
+        "App Inventor + Minecraft HTML website":
+          "https://drive.google.com/file/d/1CtefFzzBEvCwWhul7xNKYACjcMhcb2v1/preview",
+      };
+
+      const projects = [
+        "Minecraft-inspired Arcade Game",
+        "Tetris in Chrome extension",
+        "MTR project",
+        "Space Invader",
+        "Comic Nostalgia Gang",
+        "Memory Game",
+        "Portfolio",
+        "ChatApp",
+        "One Piece Quiz",
+        "Recycling Game",
+        "NBA Data Analysis",
+        "2048 game",
+        "Liverpool Website",
+        "FUNLAND",
+        "Amelia's Station",
+        "School Club Slides made by Kelbee!",
+        "Treasure Hunt",
+
+        "Be a Little YouTuber",
+        "Football Analysis",
+        "Save The Ocean - Julien's Twist",
+        "Snake Game",
+        "Card Game",
+        "Portfolio Website",
+        "App Inventor + Minecraft HTML website",
+      ];
+
+      const cardContainer = document.getElementById("cardContainer");
+
+      projects.forEach((project) => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const link = document.createElement("a");
+        link.href = links[project];
+        link.target = "_blank";
+
+        const image = document.createElement("img");
+        image.src = imageMap[project];
+        link.appendChild(image);
+
+        card.appendChild(link);
+
+        const title = document.createElement("h2");
+        title.textContent = project;
+        card.appendChild(title);
+
+        const subtitle = document.createElement("h4");
+        subtitle.textContent = studentNames[project];
+        card.appendChild(subtitle);
+
+        cardContainer.appendChild(card);
+      });
     </script>
   </body>
 </html>
