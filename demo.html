@@ -2,173 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="images/P-logo.png" />
+    <link rel="shortcut icon" href="images/P-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Private Class Student Projects - Preface</title>
+    <title>Student Projects - Preface</title>
     <style>
       body {
         font-family: "Montserrat", sans-serif;
-
-        margin: 0 auto;
-        background-color: #f0f0f0;
-      }
-
-      .sticky {
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        background-color: #ffffff;
-        position: -webkit-sticky; /* Safari */
-        position: sticky;
-        top: 0;
-        z-index: 100; /* Ensure the navbar is above other content */
+        background-color: #f4f4f9;
+        color: #333;
       }
+
+      header {
+        text-align: center;
+        background-color: white;
+        padding: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
       h1 {
         text-align: center;
         color: #404041;
-        margin-top: 60px;
+        margin-top: 20px;
         padding: 10px;
-      }
-      h2 {
-        font-size: 1em;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 20px;
-      }
-      h3 {
-        text-align: center;
-        padding: 10px;
-        color: #404041;
       }
 
-      .center {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
-      li {
-        margin-bottom: 10px;
-      }
-      a {
-        text-decoration: none;
-        color: #85bcce;
-        transition: color 0.3s ease;
-      }
-      a:hover {
-        color: #0056b3;
-      }
       .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
         padding: 20px;
       }
+
       .card {
-        width: 200px;
-        margin: 10px;
-        text-align: center;
         background-color: white;
-        color: #404041;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 20px;
+        overflow: hidden;
+        transition: transform 0.3s;
+      }
 
-        transition: transform 0.3s ease;
-      }
       .card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-10px);
       }
+
       .card img {
         width: 100%;
-        height: 150px;
-        object-fit: cover;
+        height: auto;
+      }
 
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+      .card h2 {
+        font-size: 1.5em;
+        margin: 10px;
       }
+
       .card h4 {
-        color: #6d6d6d;
-        padding-bottom: 20px;
-        font-size: 0.8em;
+        font-size: 1em;
+        margin: 10px;
+        color: #666;
       }
-      .card p {
+
+      .card-text {
         padding: 10px;
-        margin: 0;
-      }
-      .text-center {
-        text-align: center;
-      }
-      .toggle-view {
-        display: block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-      }
-      .toggle-view:hover {
-        background-color: #0056b3;
-      }
-      .hidden {
-        display: none;
       }
     </style>
   </head>
   <body>
-    <header style="text-align: center; background-color: white; width: 100%">
+    <header>
       <img
         src="images/Preface logo_grey.png"
         alt="Preface Logo Grey"
-        style="width: 100%; max-width: 300px; background-color: white"
+        style="width: 100%; max-width: 300px"
       />
     </header>
 
-    <h1>Private Class Student Project Library</h1>
+    <h1>Student Projects</h1>
 
     <div id="cardContainer" class="container"></div>
     <script>
       const imageMap = {
-        "Minecraft-inspired Arcade Game": "images/Ellie Wong.png",
+        "App Inventor Minecraft Video Recording": "images/Ellie Wong.png",
         "Tetris in Chrome extension": "images/Kayley Kwok.png",
-        "MTR project": "images/Ka Him.JPG",
+        "MTR project": "images/Neo.png",
         "Space Invader": "images/Chester.png",
         "Comic Nostalgia Gang": "images/Caleb.png",
-        "Memory Game": "images/Emma - Memory.png",
+        "Memory Game": "images/Emma.jpeg",
         Portfolio: "images/Emma.jpeg",
         ChatApp: "images/Neo.png",
-        "One Piece Quiz": "images/Junghu.jpeg",
-        "Recycling Game": "images/EthanZheng.jpeg",
-        "NBA Data Analysis": "images/Elvin Cheung - NBA.jpeg",
-        "2048 game": "images/Elvin Cheung - 2048.png",
+        "Optical Illusion": "images/Junghu.jpeg",
+        "Ethan's Scratch Recycling Game": "images/EthanZheng.jpeg",
+        "NBA Data Analysis": "images/Evan Lam.png",
+        "2048 game": "images/Evan Lam.png",
         "Liverpool Website": "images/Jayden Heng.png",
         FUNLAND: "images/Alicia.png",
         "Amelia's Station": "images/Amelia.png",
         "School Club Slides made by Kelbee!": "images/Kelbee.png",
         "Treasure Hunt": "images/Enoch Chiu.png",
-        "Be a Little YouTuber": "images/Gareth-video.png",
-        "Football Analysis": "images/Ethan Yip.png",
+        "Space Invendor Game": "images/Gareth-game.png",
+        "Creative Media Design Final Project": "images/Gareth-video.png",
+        "Screen Recording of Football Analysis": "images/Ethan Yip.png",
         "Save The Ocean - Julien's Twist": "images/Julien Tsang.png",
-        "Snake Game": "images/Roy Chi.png",
+        "2 Snack Game Video Recording": "images/Roy Chi.png",
         "Card Game": "images/Nok Yin.png",
         "Portfolio Website": "images/Evan Lam.png",
-        "App Inventor Game": "images/Marquis.png",
+        "App Inventor + Minecraft HTML website": "images/Marquis.png",
       };
 
       const studentNames = {
-        "Minecraft-inspired Arcade Game": "Ellie Wong",
+        "App Inventor Minecraft Video Recording": "Ellie Wong",
         "Tetris in Chrome extension": "Kayley Kwok",
         "MTR project": "Ka Him Leung",
         "Space Invader": "Chester Tam",
@@ -176,8 +124,8 @@
         "Memory Game": "Emma Hunt",
         Portfolio: "Emma Hunt",
         ChatApp: "Neo Lung",
-        "One Piece Quiz": "JungHu",
-        "Recycling Game": "Ethan Zheng",
+        "Optical Illusion": "JungHu",
+        "Ethan's Scratch Recycling Game": "Ethan Zheng",
         "NBA Data Analysis": "Elvin Cheung",
         "2048 game": "Elvin Cheung",
         "Liverpool Website": "Jayden Heng",
@@ -185,19 +133,19 @@
         "Amelia's Station": "Amelia Tan",
         "School Club Slides made by Kelbee!": "Kelbee Fok",
         "Treasure Hunt": "Enoch Chiu",
-
-        "Be a Little YouTuber": "Gareth Li",
-        "Football Analysis": "Ethan Yip",
+        "Space Invendor Game": "Gareth Li",
+        "Creative Media Design Final Project": "Gareth Li",
+        "Screen Recording of Football Analysis": "Ethan Yip",
         "Save The Ocean - Julien's Twist": "Julien Tsang",
-        "Snake Game": "Roy Chi",
+        "2 Snack Game Video Recording": "Roy Chi",
         "Card Game": "Nok Yin Lim",
         "Portfolio Website": "Evan Lam",
-        "App Inventor Game": "Marquis Chan",
+        "App Inventor + Minecraft HTML website": "Marquis Chan",
       };
 
       const links = {
-        "Minecraft-inspired Arcade Game":
-          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/preview",
+        "App Inventor Minecraft Video Recording":
+          "https://drive.google.com/file/d/1reumYtjH__4pDZ3D2OvDEFVLXSRT5W5B/view?usp=drive_link",
         "Tetris in Chrome extension":
           "https://chromewebstore.google.com/detail/sirtet/ihladjbfkfejijomgfncgjgdlkaggkie",
         "MTR project": "https://stevenleung124.itch.io/hkr-on-the-go",
@@ -206,12 +154,12 @@
         "Memory Game": "https://227560em.github.io/Memory-Game/",
         Portfolio: "https://227560em.github.io/Web-Development-Portfolio/",
         ChatApp:
-          "https://drive.google.com/file/d/1VcyvbGewM8lwsHaGgsAvjZJDmTIAetyQ/preview",
-        "One Piece Quiz":
-          "https://drive.google.com/file/d/1TreneblRvCLq1KQedwjc6mdfcbijD7E4/preview",
-        "Recycling Game": "https://scratch.mit.edu/projects/1132224587",
+          "https://drive.google.com/file/d/1VcyvbGewM8lwsHaGgsAvjZJDmTIAetyQ/view?usp=drive_link",
+        "Optical Illusion": "https://ai2.appinventor.mit.edu/#4880069958893568",
+        "Ethan's Scratch Recycling Game":
+          "https://scratch.mit.edu/projects/1132224587",
         "NBA Data Analysis":
-          "https://drive.google.com/file/d/1WKo9cmM-KeUHwm8oHgKpHq0WDRBPyH0N/preview",
+          "https://drive.google.com/file/d/1WKo9cmM-KeUHwm8oHgKpHq0WDRBPyH0N/view?usp=drive_link",
         "2048 game": "https://2048-sepia-nine.vercel.app/",
         "Liverpool Website": "https://liverpooldream.netlify.app/",
         FUNLAND: "https://scratch.mit.edu/projects/984574965/",
@@ -219,23 +167,24 @@
         "School Club Slides made by Kelbee!":
           "https://docs.google.com/presentation/d/1tm6m9VoGVDXiYpaz4RsWElh671dvYel0tFItPimkpDU/edit#slide=id.p1",
         "Treasure Hunt": "https://enochc.itch.io/treasure-hunt",
-
-        "Be a Little YouTuber":
-          "https://drive.google.com/file/d/12T7uTmajt-_Q6xSQvW3x0OVGquH6mJv5/preview",
-        "Football Analysis":
-          "https://drive.google.com/file/d/1WGZFeiG0CK92lczet-RmaW9gjvWqzk3P/preview",
+        "Space Invendor Game":
+          "https://drive.google.com/file/d/1rRCWFOZSndDDk3irOjtfW3OlRmPeJdwD/view?usp=drive_link",
+        "Creative Media Design Final Project":
+          "https://drive.google.com/file/d/12T7uTmajt-_Q6xSQvW3x0OVGquH6mJv5/view?usp=drive_link",
+        "Screen Recording of Football Analysis":
+          "https://drive.google.com/file/d/1WGZFeiG0CK92lczet-RmaW9gjvWqzk3P/view?usp=drive_link",
         "Save The Ocean - Julien's Twist":
-          "https://drive.google.com/file/d/1XtQYX66nbhYKVozAI-u7TcU5wYRU288H/preview",
-        "Snake Game":
-          "https://drive.google.com/file/d/19HIFME8Vv_G3duqMRhUNDvrsA4TL65dQ/preview",
+          "https://drive.google.com/file/d/1XtQYX66nbhYKVozAI-u7TcU5wYRU288H/view?usp=drive_link",
+        "2 Snack Game Video Recording":
+          "https://drive.google.com/drive/folders/19mFa3V8UUnISzy8vqMFSufKr3-p0Cm2X",
         "Card Game": "https://github.com/nokyinlim/card-game",
         "Portfolio Website": "https://superel123.github.io/Portfolio/",
-        "App Inventor Game":
-          "https://drive.google.com/file/d/1CtefFzzBEvCwWhul7xNKYACjcMhcb2v1/preview",
+        "App Inventor + Minecraft HTML website":
+          "https://drive.google.com/file/d/1CtefFzzBEvCwWhul7xNKYACjcMhcb2v1/view",
       };
 
       const projects = [
-        "Minecraft-inspired Arcade Game",
+        "App Inventor Minecraft Video Recording",
         "Tetris in Chrome extension",
         "MTR project",
         "Space Invader",
@@ -243,8 +192,8 @@
         "Memory Game",
         "Portfolio",
         "ChatApp",
-        "One Piece Quiz",
-        "Recycling Game",
+        "Optical Illusion",
+        "Ethan's Scratch Recycling Game",
         "NBA Data Analysis",
         "2048 game",
         "Liverpool Website",
@@ -252,21 +201,21 @@
         "Amelia's Station",
         "School Club Slides made by Kelbee!",
         "Treasure Hunt",
-
-        "Be a Little YouTuber",
-        "Football Analysis",
+        "Space Invendor Game",
+        "Creative Media Design Final Project",
+        "Screen Recording of Football Analysis",
         "Save The Ocean - Julien's Twist",
-        "Snake Game",
+        "2 Snack Game Video Recording",
         "Card Game",
         "Portfolio Website",
-        "App Inventor Game",
+        "App Inventor + Minecraft HTML website",
       ];
 
       const cardContainer = document.getElementById("cardContainer");
 
       projects.forEach((project) => {
         const card = document.createElement("div");
-        card.className = "card";
+        card.classList.add("card");
 
         const link = document.createElement("a");
         link.href = links[project];
@@ -274,6 +223,7 @@
 
         const image = document.createElement("img");
         image.src = imageMap[project];
+        image.alt = project;
         link.appendChild(image);
 
         card.appendChild(link);
@@ -284,6 +234,7 @@
 
         const subtitle = document.createElement("h4");
         subtitle.textContent = studentNames[project];
+        subtitle.classList.add("card-text");
         card.appendChild(subtitle);
 
         cardContainer.appendChild(card);
